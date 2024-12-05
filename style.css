@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  background-color: #231f20;
+  color: #fff;
+}
+
+:root {
+  --primary-color: #28bf96;
+  --primary-color-dark: #209677;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: var(--primary-color);
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+nav {
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.nav__logo img {
+  width: 100px;
+}
+.nav__logo {
+  margin-top: -30px;
+  margin-bottom: -40px;
+
+  color: var(--primary-color);
+  transition: 0.7s ease;
+}
+.nav__logo:hover {
+  transform: translateY(-9px);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  font-size: 25px;
+  text-decoration: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+.img {
+  text-align: center;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  display: none;
+  pointer-events: none;
+  z-index: 1000;
+}
