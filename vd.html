@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our working moments</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: #209677;
+      }
+      .con {
+        width: 80%;
+        margin: 80px auto;
+      }
+      .con h1 {
+        margin-top: -40px;
+        padding: 50px 0;
+        color: #209677;
+        font-size: 44px;
+        text-align: center;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .col {
+        flex-basis: 50%;
+        min-width: 250px;
+      }
+      .fe {
+        width: 83%;
+        margin: auto;
+        position: relative;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      .sml {
+        background: #209677;
+        display: flex;
+        margin: 20px 0;
+        align-items: center;
+        border-radius: 6px;
+        overflow: hidden;
+        width: 85%;
+      }
+      .sml p {
+        color: #fff;
+        margin-left: 20px;
+        font-size: 15px;
+        line-height: 22px;
+      }
+      .sm {
+        position: relative;
+      }
+      .sm img {
+        width: 150px;
+      }
+      .play {
+        width: 60px;
+        position: absolute;
+        left: 40%;
+        top: 40%;
+        transform: translateY(-50%, -50%);
+        cursor: pointer;
+      }
+      .sm .play {
+        width: 35px;
+      }
+      .vdd {
+        width: 80%;
+        position: absolute;
+        left: 10%;
+        top: 2%;
+        transform: translateY(-50%, -50%);
+        display: none;
+      }
+      video:focus {
+        outline: none;
+      }
+      .cll {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        cursor: pointer;
+      }
+      video {
+        height: 700px;
+        background-color: #fff;
+      }
+      .btn-talk {
+        font-size: 18px;
+        margin-left: 1200px;
+        text-decoration: none;
+        color: #209677;
+        padding: 8px 35px;
+        margin-bottom: -50px;
+        border-radius: 10px;
+        border: 2px double;
+        font-weight: 500;
+        transition: 0.3s;
+        box-shadow: 2px 2px 20px 2px #28bf96;
+      }
+
+      .btn-talk:hover {
+        color: #fff;
+        background-color: #28bf96;
+        border-top-right-radius: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <br />
+    <a href="index.html" class="btn-talk">Close &#10060;</a>
+    <div class="con">
+      <h1>Our working moments</h1>
+      <div class="row">
+        <div class="col">
+          <div class="fe">
+            <img src="4.jpg" alt="maison du web" width="100%" />
+            <img src="pl.jpg" class="play" onclick="playVideo('v1.mp4')" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="sml">
+            <div class="sm">
+              <img src="1.jpg" height="100px" />
+              <img src="pl.jpg" class="play" onclick="playVideo('v2.mp4')" />
+            </div>
+            <p>
+              Responsiveness, Adaptability, Generosity, all in a good mood
+              <br />
+              Be MDW &nbsp; &nbsp;&nbsp; Be Awesome
+            </p>
+          </div>
+          <div class="sml">
+            <div class="sm">
+              <img src="2.jpg" height="100px" />
+              <img src="pl.jpg" class="play" onclick="playVideo('v3.mp4')" />
+            </div>
+            <p>we are family</p>
+          </div>
+          <div class="sml">
+            <div class="sm">
+              <img src="3.jpg" height="100px" />
+              <img src="pl.jpg" class="play" onclick="playVideo('v4.mp4')" />
+            </div>
+            <p>
+              It's a small step for each employee, a big step for the agency and
+              its partners
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="vdd" id="vid">
+      <video width="100%" controls autoplay id="myv">
+        <source src="ms.mp4" type="video/mp4" />
+      </video>
+      <img src="cl.jpg" class="cll" onclick="stopVideo()" />
+    </div>
+
+    <script>
+      var vid = document.getElementById("vid");
+      var myv = document.getElementById("myv");
+
+      function stopVideo() {
+        vid.style.display = "none";
+      }
+      function playVideo(file) {
+        myv.src = file;
+        vid.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
