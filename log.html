@@ -99,24 +99,36 @@
         <form action="log.php" method="POST">
           <h1>Create Account</h1>
           <div class="social-icons">
-              <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-              <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
           <span>or use your email for registration</span>
           <input type="hidden" name="action" value="sign-up" />
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
-          <input type="password" name="password" placeholder="Password" required />
-          <select name="role" id="role" required onchange="toggleAdminCodeField()">
-              <option value="user">User</option>
-              <option value="admin">Admin</option>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <select
+            name="role"
+            id="role"
+            required
+            onchange="toggleAdminCodeField()"
+          >
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
           </select>
           <input
-              type="text"
-              name="admin_code"
-              id="admin_code"
-              placeholder="Enter Admin Code"
-              style="display: none;"
+            type="text"
+            name="admin_code"
+            id="admin_code"
+            placeholder="Enter Admin Code"
+            style="display: none"
           />
           <button type="submit">Sign Up</button>
         </form>
@@ -125,16 +137,23 @@
         <form action="log.php" method="POST">
           <h1>Sign In</h1>
           <div class="social-icons">
-              <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-              <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
           <span>or use your email password</span>
           <input type="hidden" name="action" value="sign-in" />
           <input type="email" name="email" placeholder="Email" required />
-          <input type="password" name="password" placeholder="Password" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
           <a href="forgot_password.html">Forgot Your Password?</a>
           <button type="submit">Sign In</button>
-      </form>
+        </form>
       </div>
       <div class="toggle-container">
         <div class="toggle">
@@ -157,15 +176,15 @@
     <script src="log.js"></script>
     <script>
       function toggleAdminCodeField() {
-          const roleSelect = document.getElementById("role");
-          const adminCodeField = document.getElementById("admin_code");
+        const roleSelect = document.getElementById("role");
+        const adminCodeField = document.getElementById("admin_code");
 
-          if (roleSelect.value === "admin") {
-              adminCodeField.style.display = "block";
-          } else {
-              adminCodeField.style.display = "none";
-          }
+        if (roleSelect.value === "admin") {
+          adminCodeField.style.display = "block";
+        } else {
+          adminCodeField.style.display = "none";
+        }
       }
-  </script>
+    </script>
   </body>
 </html>

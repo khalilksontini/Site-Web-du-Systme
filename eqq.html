@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our family</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: linear-gradient(30deg, #209677, #fff, #28bf96);
+      }
+      .con {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+      }
+      .imgg {
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+      }
+      .sld {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 30px 0 30px;
+      }
+      .con img {
+        position: relative;
+        height: 370px;
+        width: 240px;
+        filter: saturate(10%);
+        transition: 0.7s;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 20%;
+      }
+      .button {
+        position: absolute;
+        width: 240px;
+        height: 370px;
+        transition: 0.7s;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 20%;
+      }
+      .button:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      #sl1:target ~ .imgg #img1,
+      #sl1:target ~ .imgg #button1 {
+        width: 900px;
+        height: 700px;
+        background-color: transparent;
+        filter: saturate(100%);
+      }
+      #sl2:target ~ .imgg #img2,
+      #sl2:target ~ .imgg #button2 {
+        width: 900px;
+        height: 700px;
+        background-color: transparent;
+        filter: saturate(100%);
+      }
+      #sl3:target ~ .imgg #img3,
+      #sl3:target ~ .imgg #button3 {
+        width: 900px;
+        height: 700px;
+        background-color: transparent;
+        filter: saturate(100%);
+      }
+      #sl4:target ~ .imgg #img4,
+      #sl4:target ~ .imgg #button4 {
+        width: 900px;
+        height: 700px;
+        background-color: transparent;
+        filter: saturate(100%);
+      }
+      #sl5:target ~ .imgg #img5,
+      #sl5:target ~ .imgg #button5 {
+        width: 900px;
+        height: 700px;
+        background-color: transparent;
+        filter: saturate(100%);
+      }
+      #sl6:target ~ .imgg #img6,
+      #sl6:target ~ .imgg #button6 {
+        width: 900px;
+        height: 700px;
+        background-color: transparent;
+        filter: saturate(100%);
+      }
+      #sl7:target ~ .imgg #img7,
+      #sl7:target ~ .imgg #button7 {
+        width: 900px;
+        height: 700px;
+        background-color: transparent;
+        filter: saturate(100%);
+      }
+      #sl1:target ~ .imgg {
+        left: 60%;
+      }
+      #sl2:target ~ .imgg {
+        left: 40%;
+      }
+      #sl3:target ~ .imgg {
+        left: 20%;
+      }
+      #sl4:target ~ .imgg {
+        left: 0%;
+      }
+      #sl5:target ~ .imgg {
+        left: -20%;
+      }
+      #sl6:target ~ .imgg {
+        left: -40%;
+      }
+      #sl7:target ~ .imgg {
+        left: -60%;
+      }
+      .oo {
+        width: 60px;
+        height: 60px;
+        margin-left: 1400px;
+        margin-top: -100px;
+        margin-bottom: 500px;
+      }
+      .vdd {
+        text-decoration: none;
+        margin-top: 600px;
+        margin-right: 100px;
+        margin-left: -150px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html"><img class="oo" src="cl.jpg" /></a>
+    <div class="con">
+      <span class="sl" id="sl1"></span>
+      <span class="sl" id="sl2"></span>
+      <span class="sl" id="sl3"></span>
+      <span class="sl" id="sl4"></span>
+      <span class="sl" id="sl5"></span>
+      <span class="sl" id="sl6"></span>
+      <span class="sl" id="sl7"></span>
+      <div class="imgg">
+        <div class="sld" id="sll">
+          <img src="1.jpg" class="img" id="img1" />
+          <a href="#sl1" class="button" id="button1"></a>
+        </div>
+        <div class="sld" id="sl2">
+          <img src="2.jpg" class="img" id="img2" />
+          <a href="#sl2" class="button" id="button2"></a>
+        </div>
+        <div class="sld" id="sl3">
+          <img src="3.jpg" class="img" id="img3" />
+          <a href="#sl3" class="button" id="button3"></a>
+        </div>
+        <div class="sld" id="sl4">
+          <img src="4.jpg" class="img" id="img4" />
+          <a href="#sl4" class="button" id="button4"></a>
+        </div>
+        <div class="sld" id="sl5">
+          <img src="5.jpg" class="img" id="img5" />
+          <a href="#sl5" class="button" id="button5"></a>
+        </div>
+        <div class="sld" id="sl6">
+          <img src="6.jpg" class="img" id="img6" />
+          <a href="#sl6" class="button" id="button6"></a>
+        </div>
+        <div class="sld" id="sl7">
+          <img src="7.jpg" class="img" id="img7" />
+          <a href="#sl7" class="button" id="button7"></a>
+        </div>
+      </div>
+    </div>
+    <a href="vd.html" class="vdd">videos</a>
+  </body>
+</html>

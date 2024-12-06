@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Système Solaire</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #2c3e50;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    #formQuiz {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 800px;
+      box-sizing: border-box;
+    }
+
+    .question {
+      margin-bottom: 25px;
+    }
+
+    .question h3 {
+      font-size: 1.3em;
+      color: #34495e;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    label {
+      display: block;
+      font-size: 1.1em;
+      color: #7f8c8d;
+      padding: 8px 0;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    label:hover {
+      color: #3498db;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+      transition: transform 0.2s ease;
+    }
+
+    input[type="radio"]:checked {
+      background-color: #3498db;
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 15px;
+      font-size: 1.2em;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .resultat {
+      font-size: 1.4em;
+      color: #27ae60;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    .question input[type="radio"]:checked + label {
+      color: #3498db;
+    }
+
+    .question {
+      background-color: #ecf0f1;
+      padding: 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .question:hover {
+      background-color: #d5dfe2;
+    }
+    
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      #formQuiz {
+        padding: 20px;
+      }
+
+      button {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Quiz : Système Solaire</h1>
+    <form id="formQuiz">
+      <div class="question">
+        <h3>1. Quelle est la planète la plus proche du Soleil ?</h3>
+        <label><input type="radio" id="q1" value="Mercure"> Mercure</label>
+        <label><input type="radio" value="Vénus"> Vénus</label>
+        <label><input type="radio" value="Mars"> Mars</label>
+      </div>
+      <div class="question">
+        <h3>2. Combien de planètes composent le système solaire ?</h3>
+        <label><input type="radio" id="q2" value="8"> 8</label>
+        <label><input type="radio" value="9"> 9</label>
+        <label><input type="radio" value="7"> 7</label>
+      </div>
+      <div class="question">
+        <h3>3. Quelle planète est surnommée la planète rouge ?</h3>
+        <label><input type="radio" id="q3" value="Mars"> Mars</label>
+        <label><input type="radio" value="Jupiter"> Jupiter</label>
+        <label><input type="radio" value="Saturne"> Saturne</label>
+      </div>
+      <div class="question">
+        <h3>4. Quelle planète possède les anneaux les plus visibles ?</h3>
+        <label><input type="radio" id="q4" value="Saturne"> Saturne</label>
+        <label><input type="radio" value="Uranus"> Uranus</label>
+        <label><input type="radio" value="Neptune"> Neptune</label>
+      </div>
+      <div class="question">
+        <h3>5. Quelle est la plus grande planète du système solaire ?</h3>
+        <label><input type="radio" id="q5" value="Jupiter"> Jupiter</label>
+        <label><input type="radio" value="Saturne"> Saturne</label>
+        <label><input type="radio" value="Uranus"> Uranus</label>
+      </div>
+      <div class="question">
+        <h3>6. Combien de satellites naturels possède la Terre ?</h3>
+        <label><input type="radio" id="q6" value="1"> 1</label>
+        <label><input type="radio" value="2"> 2</label>
+        <label><input type="radio" value="3"> 3</label>
+      </div>
+      <div class="question">
+        <h3>7. Quelle planète est connue pour son atmosphère toxique et son effet de serre ?</h3>
+        <label><input type="radio" id="q7" value="Vénus"> Vénus</label>
+        <label><input type="radio" value="Mars"> Mars</label>
+        <label><input type="radio" value="Neptune"> Neptune</label>
+      </div>
+      <div class="question">
+        <h3>8. Quelle planète est surnommée "la géante de glace" ?</h3>
+        <label><input type="radio" id="q8" value="Uranus"> Uranus</label>
+        <label><input type="radio" value="Jupiter"> Jupiter</label>
+        <label><input type="radio" value="Mars"> Mars</label>
+      </div>
+      <div class="question">
+        <h3>9. Quelle planète possède le plus de satellites naturels connus ?</h3>
+        <label><input type="radio" id="q9" value="Saturne"> Saturne</label>
+        <label><input type="radio" value="Jupiter"> Jupiter</label>
+        <label><input type="radio" value="Uranus"> Uranus</label>
+      </div>
+      <div class="question">
+        <h3>10. Quelle planète est la plus éloignée du Soleil ?</h3>
+        <label><input type="radio" id="q10" value="Neptune"> Neptune</label>
+        <label><input type="radio" value="Uranus"> Uranus</label>
+        <label><input type="radio" value="Pluton"> Pluton</label>
+      </div>
+      <button type="button" onclick="verifierQuiz()">Vérifier</button>
+    </form>
+    <p class="resultat" id="resultat"></p>
+  </div>
+
+  <script>
+    function verifierQuiz() {
+      let score = 0;
+
+      // Check for correct answers based on user input
+      if (document.getElementById("q1").checked) {
+        score++;
+      }
+      if (document.getElementById("q2").checked) {
+        score++;
+      }
+      if (document.getElementById("q3").checked) {
+        score++;
+      }
+      if (document.getElementById("q4").checked) {
+        score++;
+      }
+      if (document.getElementById("q5").checked) {
+        score++;
+      }
+      if (document.getElementById("q6").checked) {
+        score++;
+      }
+      if (document.getElementById("q7").checked) {
+        score++;
+      }
+      if (document.getElementById("q8").checked) {
+        score++;
+      }
+      if (document.getElementById("q9").checked) {
+        score++;
+      }
+      if (document.getElementById("q10").checked) {
+        score++;
+      }
+
+      // Display the result
+      document.getElementById("resultat").innerText = `Votre score est de ${score}/10`;
+    }
+  </script>
+</body>
+</html>
