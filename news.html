@@ -73,15 +73,15 @@
 
       async function fetchAstronomyNews() {
         const url = `https://newsapi.org/v2/everything?q=astronomy&apiKey=${apiKey}&sortBy=publishedAt&pageSize=5`;
+        console.log("hh");
         try {
           const response = await fetch(url);
           const data = await response.json();
           displayNews(data.articles);
+          console.log("gg", data.articles);
         } catch (error) {
-          console.error(
-            "Erreur lors de la récupération des nouvelles :",
-            error
-          );
+          console.log("tt");
+          console.log("Erreur lors de la récupération des nouvelles :", error);
           newsContainer.innerHTML =
             "<p>Désolé, une erreur est survenue lors du chargement des actualités.</p>";
         }
